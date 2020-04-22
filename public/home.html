@@ -3,9 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>أحصائية أنابيب الغاز</title>
 </head>
 <body>
   
+  <div class="container">
+    <h2>املأ البيانات التالية</h2>
+    <form >
+      <label for="fname">إسم الأسرة</label><br>
+      <input type="text" id="fname" name="fname"><br><br>
+    
+      <label for="quantity">رقم المنزل</label><br>
+      <input type="number" id="homeNum" name="quantity" min="1" max="500"><br><br>
+
+      <label for="quantity">عدد الانابيب</label><br>
+      <input type="number" id="GasNum" name="quantity" min="1" max="20"><br><br>
+    
+
+      <label>نوع الأنبوبة</label>
+        <select>
+          <!-- <option value="2" disabled selected>اختار نوع الانبوبة</option> -->
+          <option value="volvo">النيل</option>
+          <option value="saab">ابرسي</option>
+          <option value="fiat">ايران</option>
+          <option value="audi">امان</option>
+          <option value="1">قادرة</option>
+          <option value="2">قابكو اجب</option>
+          <option value="3">الوطنية</option>
+          <option value="au4di">السندس</option>
+          <option value="a5udi">النحلة</option>
+          <option value="a8udi">بنتا</option>
+          <option value="au6di">الطريفي</option>
+          <option value="au7di">سوداغاز</option>
+        </select>
+
+    <br><br><br>
+    
+      <!-- <label for="lname">نوع الأنبوبة:</label><br>
+      <input type="text" id="lname" name="lname"><br><br> -->
+      <input type="submit" value="أرسل" class="btn btn-large waves-effect">
+    </form> 
+    
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    console.log('here')
+    $(document).ready(function(){
+    $('select').formSelect();
+});
+  </script>
+
+
 </body>
 </html>
