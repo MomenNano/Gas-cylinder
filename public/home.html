@@ -9,42 +9,57 @@
   <title>أحصائية أنابيب الغاز</title>
 </head>
 <body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right"><img src="images/logo.png" width="100" height="60"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li> <h5>3 لجان مقاومة مربع</h5></li>
+        
+      </ul>
+    </div>
+  </nav>
+        
   
-  <div class="container">
-    <h2>املأ البيانات التالية</h2>
-    <form >
-      <label for="fname">إسم الأسرة</label><br>
-      <input type="text" id="fname" name="fname"><br><br>
+  <div class="container" >
+    <h2>املأ البيانات المطلوبة</h2><br>
+    <form action="http://127.0.0.1:3000/submit" method="POST">
+      <label for="fname" >إسم الأسرة</label><br>
+      <input type="text" id="fname" name="name" required><br><br>
     
       <label for="quantity">رقم المنزل</label><br>
-      <input type="number" id="homeNum" name="quantity" min="1" max="500"><br><br>
+      <input type="number" id="homeNum" name="homeNum" min="1" max="500" required><br><br>
 
       <label for="quantity">عدد الانابيب</label><br>
-      <input type="number" id="GasNum" name="quantity" min="1" max="20"><br><br>
+      <input type="number" id="GasNum" name="gasNum" min="1" max="20" required><br><br>
     
 
       <label>نوع الأنبوبة</label>
-        <select>
-          <!-- <option value="2" disabled selected>اختار نوع الانبوبة</option> -->
-          <option value="volvo">النيل</option>
-          <option value="saab">ابرسي</option>
-          <option value="fiat">ايران</option>
-          <option value="audi">امان</option>
-          <option value="1">قادرة</option>
-          <option value="2">قابكو اجب</option>
-          <option value="3">الوطنية</option>
-          <option value="au4di">السندس</option>
-          <option value="a5udi">النحلة</option>
-          <option value="a8udi">بنتا</option>
-          <option value="au6di">الطريفي</option>
-          <option value="au7di">سوداغاز</option>
+        <select name="gasType" required>
+          <option value="" disabled selected>اختار نوع الانبوبة</option>
+          <option value="النيل">النيل</option>
+          <option value="ابرسي">ابرسي</option>
+          <option value="ايران">ايران</option>
+          <option value="امان">امان</option>
+          <option value="قادرة">قادرة</option>
+          <option value="قابكو اجب">قابكو اجب</option>
+          <option value="الوطنية">الوطنية</option>
+          <option value="السندس">السندس</option>
+          <option value="النحلة">النحلة</option>
+          <option value="بنتا">بنتا</option>
+          <option value="الطريفي">الطريفي</option>
+          <option value="سوداغاز">سوداغاز</option>
         </select>
 
     <br><br><br>
     
       <!-- <label for="lname">نوع الأنبوبة:</label><br>
       <input type="text" id="lname" name="lname"><br><br> -->
-      <input type="submit" value="أرسل" class="btn btn-large waves-effect">
+      <!-- <input type="submit" value="أرسل" class="btn btn-large waves-effect"> -->
+      <button class="btn btn-large waves-effect waves-light" type="submit" name="action">أرسل
+        <i class="material-icons right">send</i>
+    </button>
     </form> 
     
 
